@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  Closure references the scope of variables that are able to be accessed outside of a function but not nested inside of another
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,6 +64,7 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 c. What is the lexical scope of `newRoll`? 
 

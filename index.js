@@ -27,11 +27,13 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ *  counter2 uses a global variable while couner1 uses return and scope
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ *  count1 because the return function counter is nested inside of counterMaker with the variable count
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *  
 */
 
 // counter1 code
@@ -56,11 +58,11 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(){
+    let it = Math.floor(Math.random() * 3);
+    return it;
 }
+
 
 /* Task 3: finalScore()
 
@@ -75,12 +77,20 @@ finalScore(inning, 9) might return:
 }
 
 */ 
+let score = 0;
+let scoreTwo = 0;
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(inning, numInning){
+  const scoreboard = [];
+  for(i = 0; i < 9; i++) {
+    score = score + inning();
+    scoreTwo = scoreTwo + inning();
+    scoreboard.push({home: score, away: scoreTwo});
+  }
+  return scoreboard[numInning];
 }
+
+
 
 /* Task 4: 
 
@@ -103,8 +113,23 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inning) {
+  for(i = 0; i < 9; i++){
+    score = score + inning();
+    scoreTwo = scoreTwo + inning();
+    if(i === 0) {
+      console.log((i + 1) + "st inning: " + score + " - " + scoreTwo);
+    }
+    else if(i === 1) {
+      console.log((i + 1) + "nd inning: " + score + " - " + scoreTwo);
+    }
+    else if(i === 2) {
+      console.log((i + 1) + "rd inning: " + score + " - " + scoreTwo);
+    }
+    else {
+      console.log((i + 1) + "th inning: " + score + " - " + scoreTwo);
+    }
+  }
 }
 
-
+scoreboard(inning);
