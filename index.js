@@ -33,7 +33,7 @@ function processFirstItem(stringList, callback) {
  *  count1 because the return function counter is nested inside of counterMaker with the variable count
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *  
+ *  ??? halp
 */
 
 // counter1 code

@@ -64,9 +64,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-
+  the return function is an example of closure because it has nested code inside of the function
+  
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  the string is always the same but the number being rolled is going to be different 5/6 of the time
+
 c. What is the lexical scope of `newRoll`? 
+  newRoll has access to all the variables inside the function and on a global scale but only the current and inner functions have access to newRoll
 
 ### Task 3 - Stretch Goals
 
